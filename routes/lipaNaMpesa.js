@@ -25,7 +25,7 @@ router.post('/lipaNaMpesa', authToken, async(req, res) => {
         console.log(timestamp);
 
         // GET Password 
-        const pre_pass = `${process.env.BusinessShortCode}${process.env.MPESA_PASSKEY} ${timestamp}`;
+        const pre_pass = `${process.env.BusinessShortCode}${process.env.MPESA_PASSKEY}${timestamp}`;
         const password = Buffer.from(pre_pass, 'utf8').toString('base64');
         console.log('Password:', password); 
 
@@ -41,7 +41,7 @@ router.post('/lipaNaMpesa', authToken, async(req, res) => {
             "PartyA": phoneNumber,  
             "PartyB": process.env.BusinessShortCode,    
             "PhoneNumber": phoneNumber,   
-            "CallBackURL": "https://mydomain.com/pat",    
+            "CallBackURL": "https://irrepressibly-unblistered-lamont.ngrok-free.dev",    
             "AccountReference":"SurePact",    
             "TransactionDesc":"Make Money"
         }
