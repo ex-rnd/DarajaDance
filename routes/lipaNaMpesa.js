@@ -24,22 +24,30 @@ router.post('/lipaNaMpesa', authToken, async(req, res) => {
         const timestamp = getTimestamp();
         console.log(timestamp);
 
+        // GET Password 
+        const pre_pass = `${process.env.BusinessShortCode}${process.env.MPESA_PASSKEY} ${timestamp}`;
+        const password = Buffer.from(pre_pass, 'utf8').toString('base64');
+        console.log('Password:', password); 
+
+
+
+
         const body = {
             "BusinessShortCode": process.env.BusinessShortCode,    
-            "Password": "MTc0Mzc5YmZiMjc5ZjlhYTliZGJjZjE1OGU5N2RkNzFhNDY3Y2QyZTBjODkzMDU5YjEwZjc4ZTZiNzJhZGExZWQyYzkxOTIwMTYwMjE2MTY1NjI3",    
+            "Password": password,    
             "Timestamp": timestamp,    
             "TransactionType": "CustomerPayBillOnline",    
             "Amount": "1",    
             "PartyA": phoneNumber,  
-            "PartyB":"174379",    
+            "PartyB": process.env.BusinessShortCode,    
             "PhoneNumber": phoneNumber,   
             "CallBackURL": "https://mydomain.com/pat",    
-            "AccountReference":"Test",    
-            "TransactionDesc":"Test"
-
-
-
+            "AccountReference":"SurePact",    
+            "TransactionDesc":"Make Money"
         }
+
+
+        
 
 
 
