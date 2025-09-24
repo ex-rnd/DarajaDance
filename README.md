@@ -1,5 +1,5 @@
-# 💳 M-Pesa Daraja STK Push Implementation with Node.js (Express)
-A Node.js Express application that lets users initiate M-Pesa STK Push payments via Safaricom’s Daraja API, complete with live ngrok tunneling, EJS views, and polling for transaction status.
+# 🔆 M-Pesa Daraja STK Push Implementation with Node.js (Express)
+A Node.js Express application that lets users initiate M-Pesa STK Push payments via Safaricom’s Daraja API 💳, complete with live ngrok tunneling, EJS views, and polling for transaction status.
 
 ## ✳️ Visual Overview 
 
