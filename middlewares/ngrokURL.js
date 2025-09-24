@@ -29,12 +29,15 @@ const port = Number(process.env.PORT || 5000);
 // minimal safe options (no 'name' or 'subdomain')
 const opts = {
     addr: port,
-    authtoken: process.env.NGROK_AUTHTOKEN || undefined,
+    authtoken: process.env.NGROK_AUTHTOKEN || 5000,
     //.bind_tls: true
 };
 
+
 domain = await ngrok.connect(opts);
 console.log("Ngrok URL:", domain);
+
+
 req.domain = domain;
 return next();
 } catch (err) {

@@ -12,6 +12,8 @@ import { initNgrok } from './middlewares/ngrokURL.js';
 
 import router from './routes/lipaNaMpesa.js'
 
+import callback from './routes/callback.js';
+
 
 
 dotenv.config();
@@ -34,6 +36,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(initNgrok);
+app.use(callback);
 app.use(router);
 
 
@@ -41,8 +44,21 @@ app.use(router);
 app.get("/", async(req, res) => {
   const token = req.token
   //console.log(token)
+  console.log(req.domain);
   res.render('payment');
   });
+
+// app.get("/success", async(req, res) => {
+//   res.render('success');
+//   });
+  
+// app.get("/failed", async(req, res) => {
+//   res.render('failed');
+//   });  
+
+app.get("/dashboard", async(req, res) => {
+  res.render('dashboard');
+  });  
 
 
 app.listen(port,  () => {
