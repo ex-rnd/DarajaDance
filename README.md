@@ -6,10 +6,7 @@ A Node.js Express application that lets users initiate M-Pesa STK Push payments 
 
 
 
-https://github.com/user-attachments/assets/68f21860-183a-4235-954a-f13ec08f326a
-
-
-https://github.com/user-attachments/assets/b3c545d6-1e89-4acc-8584-f2342a66e28a
+https://github.com/user-attachments/assets/068fdd5f-4129-4d89-862b-75b128930a9c
 
 
 
