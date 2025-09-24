@@ -139,7 +139,8 @@ router.post('/lipaNaMpesa', authToken, async(req, res) => {
         }
 
     } catch (error) {
-        console.log("STK Push Error: ", error)
+        //console.log("STK Push Error: ", error)
+        //console.log("STK Push Error")
     }
 });
 

@@ -1,3 +1,4 @@
+// #
 
 import express from 'express';
 import path, { dirname } from 'path';
@@ -6,7 +7,6 @@ import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 
 import { authToken } from './middlewares/authorization.js';
-//import router from './routes/lipaNaMpesa.js'
 
 import { initNgrok } from './middlewares/ngrokURL.js';
 

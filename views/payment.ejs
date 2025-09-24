@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Methods</title>
+    <title> SurePact Payments </title>
     <link rel="stylesheet" href="/static/styles/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,18 +16,18 @@
             <div class="row justify-content-center align-items-center mt-4 mb-0">
                 <div class="col-12 col-md-7 border rounded ps-3 pt-2 pb-4 mt-3 mb-3">
                     <div class="pt-4 pb-2 mb-3">
-                        <h1 class="fs-4 m-1"><i class="bi bi-wallet2 pe-2"></i> SurePact Express Payment </h1>
+                        <h1 class="fs-4 m-1"><i class="bi bi-wallet2 pe-2"></i> SurePact Express </h1>
                         <hr>
                         <h2 class="fs-5 m-1"><strong class="text-success">Pay</strong> With</h2>
                         <img src="/static/images/mpesa.png" alt="Mpesa Icon" class="img-fluid m-1 mpesa-icon" />
                         <form id="form" class="row m-1" method="post" action="/lipaNaMpesa">
                             <div class="mb-3 ps-0">
-                                <label for="phoneNumber" class="form-label pb-1 d-block fs-6"><span class="fs-5 bold text-black pe-3 fw-bolder"> KES 100 </span> for Unlimited Gaming </label>
+                                <label for="phoneNumber" class="form-label pb-1 d-block fs-6"><span class="fs-5 bold text-black pe-3 fw-bolder"> KES 100 </span> Only </label>
                                 <label for="phoneNumber" class="form-label pb-1 d-block fs-6">Phone Number</label>
                                 <input type="tel" class="form-control w-75" id="phoneNumber" name="phoneNumber" placeholder="0712345678"
                                     pattern="[0-9]{10}" required>
                             </div>
-                            <button type="submit" class="btn btn-success fs-6" id="submit-btn">Renew Package</button>
+                            <button type="submit" class="btn btn-success fs-6" id="submit-btn"> Do Your Due </button>
                         </form>
                         <!-- <hr class="mt-5 ">
                         <h2 class="fs-5 mb-4 mt-2 d-block "> <span class="text-black-75">Other</span> <strong class="text-primary">Payment Methods</strong></h2>
@@ -47,12 +47,12 @@
         <div class="container-sm ">
             <div class="row justify-content-center align-items-center mt-4 mb-0 text-center">
                 <div class="content-col col-12 col-md-7 border rounded ps-3 pt-2 pb-4 mt-3 mb-3">
-                    <h1 class="fs-3 pt-3 p-3 text-success"> <strong>Processing Your Payment </strong> </h1>
+                    <h1 class="fs-3 pt-3 p-3 text-success"> <strong> Processing Your Payment </strong> </h1>
                     <img src="/static/images/processing.gif" alt=" processing payment" />
-                    <h2 class="fs-5 pb-3 text-success">Please do not refresh </h2>
-                    <p class="fs-6 ps-5 pe-5 pb-5">Please check your phone and enter the M-Pesa pin to confirm. </p>
-                    <button type="submit" class="btn btn-warning fs-6 mb-2"><a href="/cancel" class="text-white fs-6 btn-link" >Cancel Payments</a></button>
-                    <h3 class="fs-5 pt-3 pb-3"> Payment Expires in<span id="pay-count"> 60 </span> Seconds</h3>
+                    <h2 class="fs-5 pb-3 text-success">Please DO NOT refresh </h2>
+                    <p class="fs-6 ps-5 pe-5 pb-5">Please check your phone and enter the M-Pesa PIN to confirm. </p>
+                    <button type="submit" class="btn btn-warning fs-6 mb-2"><a href="/cancel" class="text-white fs-6 btn-link" > Cancel Payment </a></button>
+                    <h3 class="fs-5 pt-3 pb-3"> Payment Expires in<span id="pay-count"> 30 </span> Seconds</h3>
     
                 </div>
             </div>
